@@ -1,7 +1,43 @@
 
 
-Hello World
+ <div class="formWrapper">
+  <form id="kitfox" name="kitfox">
+    <input type="hidden" name="subject" value="ContivSignup">
+
+    <div>Email: <input type="text" value="" name="email"></div>
+    <div>Name: <input type="text" value="" name="Name"></div>
+    <div>Species: <input type="text" value="" name="species"></div>
+
+    <div><input type="checkbox" name="hungry" value="yes"> hungry like a wolf? </div>
+
+    <div><input type="radio" name="Gender" value="male" checked> male fox</div>
+    <div><input type="radio" name="Gender" value="female"> female fox</div>
+
+    <div>
+      <select name="state">
+      <option value="" selected>choose a State...</option>
+      <option value="CA">CA</option>
+      <option value="OR">OR</option>
+      <option value="WA">WA</option>
+      </select>
+    </div>
+
+    <input type="submit" name="Send">
+  </form>
+</div>
+
+<div class="thankyouWrapper" style="display: none;">
+  <h2><em>Thank You!</em></h2>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="./script.js" type="text/javascript"></script>
+<script src="http://ec2-52-11-94-129.us-west-2.compute.amazonaws.com/javascripts/kitfox_client.js"></script>
+
+<script>
+function kitfoxCallback() {
+  $('.formWrapper').slideUp(1000,'swing');
+  $('.thankyouWrapper').slideDown(1000,'swing');
+}
+</script>
+
 
